@@ -26,7 +26,7 @@ ping aacv-bbb.local
 
 Connect joystick to laptop, wait 30s then execute:
 ```
-roscd rc_aacv
+roscd rc_aacv/launch
 . test.sh
 ```
 
