@@ -1,0 +1,24 @@
+<launch>
+  <arg name="port" default="/dev/ttyO4"/>
+  <arg name="timeout" default="20"/>
+
+ <!-- joy node (this machine) -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0" />
+    <param name="baud" value="115200"/>
+  </node>
+
+  <machine name="aacv" address="aacv-bbb.local" env-loader="/root/env.sh" user="root" timeout="$(arg timeout)"/>
+    
+  <node machine="aacv" pkg="rc_aacv" type="teleop_wrench_joy.py" name="teleop_wrench_joy"  >
+        <remap from="/wrench" to="/teleop_wrench"/>
+  </node>
+
+  <node machine="aacv" pkg="rosserial_python" type="serial_node.py" name="arduino_server" >
+    <param name="port" type="string" value="/dev/ttyO4"/>
+    <param name="baud" type="int" value="57600"/>
+  </node>
+
+</launch>
