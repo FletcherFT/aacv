@@ -28,7 +28,8 @@ cd ../..
 catkin_make
 ```
 
-Connect laptop up to wifi network, boot up aacv and check that you can ping the beaglebone black
+Connect laptop up to wifi network, boot up aacv and check that you can ping the beaglebone black.
+
 wifi SSID:  "FOX_network"
 wifi passkey: "12345678"
 
