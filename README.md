@@ -9,9 +9,7 @@ Follow [These Instructions](https://www.ubuntu.com/download/desktop/create-a-usb
 From here you can install Ubuntu 14.04 either as a complete overwrite of your machine, or you as a dual-boot arrangment.  Follow the installation wizard as desired.
 
 ## rc_aacv Install Instructions
-__
-Built for [Ubuntu 14.04 Trusty Tahr LTS](http://releases.ubuntu.com/14.04/).
-__
+__Built for [Ubuntu 14.04 Trusty Tahr LTS](http://releases.ubuntu.com/14.04/).__
 
 Install [ROS Indigo](http://wiki.ros.org/indigo/Installation/Ubuntu)
 
